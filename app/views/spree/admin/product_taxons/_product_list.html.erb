@@ -1,9 +1,9 @@
 <ul class="products_ul" id='products_ul'>
   <%
     if taxon.id
-      products = taxon.products.available
+      products = taxon.products.active
     else
-      products = Spree::Product.available
+      products = Spree::Product.active
     end
 
     #collect the pts for this taxon from each product
